@@ -1,0 +1,53 @@
+.animateCharacter {
+    /* text-transform: uppercase; */
+    background-image: linear-gradient(-225deg, #182B60 0%, #263e80 50%, #800d0d 60%, #8d3a3a 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s alternate-reverse infinite;
+}
+@keyframes textclip {
+    0% {
+        background-position: 0% left;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 80px;
+    font-weight:800;
+}
+.hero h2 {
+    margin-top: -20px;
+    font-size: 50px;
+    font-weight:800;
+}
+.hero h2 span {
+    font-size: 60px;
+}
+.hero p {
+    font-size: 20px;
+    color: #525455;
+}
+.hero button {
+    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 30%);
+    border: none;
+    padding: 10px 50px;
+}
+.hero button {
+    /* background-color: rgb(124, 29, 175) !important; */
+}

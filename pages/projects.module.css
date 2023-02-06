@@ -1,0 +1,21 @@
+ .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    color:aqua
+  }
+  
+  .projectCard {
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .projectCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .projectLogo {
+    max-width: 200px !important;
+    margin-bottom: 20px;
+  }
+  

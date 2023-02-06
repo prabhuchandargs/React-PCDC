@@ -1,0 +1,10 @@
+.menu {
+    /* padding: 0 !important; */
+}
+.menu img {
+    width: 120px;
+    height: auto;
+}
+.menu a {
+    font-size: 18px;
+}
