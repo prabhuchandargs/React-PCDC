@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
 import SwiperCore, { Autoplay } from 'swiper';
 import "swiper/swiper-bundle.css";
+import Title from './sectionTitle';
 // import 'swiper/swiper.min.css'
 // import 'swiper/modules/pagination/pagination.min.css'
 
@@ -46,18 +47,21 @@ const ClientScroller = ({ images }) => {
     }, []);
 
     return (
-        <div className="swiper-container" style={{margin: "100px 0 !important"}}>
-            <div className="swiper-wrapper align-items-center">
-                {images.map((image, index) => (
-                    <div key={index} className="swiper-slide">
-                        <img className={`img-fluid`} src={image} alt={`Image ${index + 1}`} />
-                    </div>
-                ))}
+        <>
+            <Title title="Previous Clients"/>
+            <div className="swiper-container" style={{ margin: "50px 0 !important" }}>
+                <div className="swiper-wrapper align-items-center">
+                    {images.map((image, index) => (
+                        <div key={index} className="swiper-slide">
+                            <img className={`img-fluid`} src={image} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+                <div className={`swiper-pagination`}></div>
+                <div className={`swiper-button-prev`}></div>
+                <div className={`swiper-button-next`}></div>
             </div>
-            <div className={`swiper-pagination`}></div>
-            <div className={`swiper-button-prev`}></div>
-            <div className={`swiper-button-next`}></div>
-        </div>
+        </>
     );
 };
 

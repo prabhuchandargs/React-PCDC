@@ -24,7 +24,8 @@ const AboutCard = ({ image, title, subHead, color, list, cardClass, width, onCli
         color: 'black',
         cursor: isHover ? 'pointer' : 'normal',
         transform: isHover ? 'scale(1.05)' : 'scale(1)',
-        border: '0'
+        border: '0',
+        backdropFilter:  'blur(3px)'
     };
 
     return(

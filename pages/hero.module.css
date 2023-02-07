@@ -1,6 +1,6 @@
 .animateCharacter {
     /* text-transform: uppercase; */
-    background-image: linear-gradient(-225deg, #182B60 0%, #263e80 50%, #800d0d 60%, #8d3a3a 100%);
+    background-image: linear-gradient(-225deg, #382289 0%, #263e80 50%, #800d0d 60%, #8d3a3a 100%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -22,10 +22,11 @@
 
 
 .hero {
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100 !important;
 }
 .hero h1 {
     font-size: 80px;

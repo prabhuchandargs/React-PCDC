@@ -1,7 +1,7 @@
 
 .pcDcCard {
     /* background-image: radial-gradient( circle at 688.769px 361.72px, #0141FF55, #0000000f ); */
-    background: linear-gradient(217deg, #182B60, rgba(0, 0, 0, 0) 80.71%), linear-gradient(127deg, #182B60, rgba(0, 0, 0, 0) 80.71%), linear-gradient(336deg, #182B60, rgba(0, 0, 0, 0) 80.71%) !important;
+    background: linear-gradient(217deg, #110736, rgba(0, 0, 0, 0) 69.71%), linear-gradient(127deg, #110736, rgba(0, 0, 0, 0) 80.71%), linear-gradient(336deg, #110736, rgba(0, 0, 0, 0) 80.71%),linear-gradient(45deg, #110736, rgba(0, 0, 0, 0) 80.71%) !important;
     height: 100%;
     text-align: center;
     color: #fff !important;
@@ -17,6 +17,7 @@
 .pcDcCard h3 {
     font-weight: 800;
     font-size: 30px;
+    margin-bottom: 0 !important;
     /* text-transform: uppercase; */
     
 }
@@ -30,6 +31,7 @@
     text-align: center;
     font-size: 25px;
     font-weight: 800;
+    margin-top: -40px !important;
 }
 
 .aboutBox {

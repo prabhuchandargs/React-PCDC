@@ -9,6 +9,12 @@
 
 .all {
     font-family: 'Inter', sans-serif;
+    /* background-image: url('/images/common/bg3.png');  */
+    /* , linear-gradient(217deg, #a5aeda, rgba(0, 0, 0, 0) 80.71%), linear-gradient(127deg, #a1afdb, rgba(0, 0, 0, 0) 80.71%), linear-gradient(336deg, #95acec, rgba(0, 0, 0, 0) 80.71%) !important; */
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 999 !important;
+    position: relative;
 }
 .all h3 {
     /* font-family: 'Flix', sans-serif; */
@@ -18,9 +24,12 @@
     /* background: linear-gradient(217deg, #799dff52, rgba(0, 0, 0, 0) 80.71%), linear-gradient(127deg, #9180f342, rgba(0, 0, 0, 0) 80.71%), linear-gradient(336deg, #7aa0e655, rgba(0, 0, 0, 0) 80.71%) !important; */
     /* background: linear-gradient(217deg, #000000, rgba(0, 0, 0, 0) 80.71%), linear-gradient(127deg, #000000, rgba(0, 0, 0, 0) 80.71%), linear-gradient(336deg, #000000, rgba(0, 0, 0, 0) 80.71%) !important; */
     padding-bottom: 100px;
-    z-index: -1;
+    z-index: 0;
 }
-
+.particles {
+    z-index: -2 !important;
+    opacity: 0.5;
+}
 .shapes {
     position: absolute;
     bottom: 0;
@@ -31,7 +40,7 @@
 }
 .shapes img {
     position: absolute;
-    filter: blur(0px);
+    filter: blur(2px);
 }
 .shapes :nth-child(1)  {
     top: 100px;
