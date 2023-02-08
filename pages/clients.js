@@ -3,6 +3,7 @@ import Swiper from "swiper";
 import SwiperCore, { Autoplay } from 'swiper';
 import "swiper/swiper-bundle.css";
 import Title from './sectionTitle';
+import styles from './clients.module.css'
 // import 'swiper/swiper.min.css'
 // import 'swiper/modules/pagination/pagination.min.css'
 
@@ -17,7 +18,8 @@ const ClientScroller = ({ images }) => {
                 loop: true,
                 autoplay: {
                     delay: 1000,
-                    disableOnInteraction: false
+                    disableOnInteraction: false,
+                    reverseDirection: true
                 },
                 pagination: {
                     el: ".swiper-pagination"
@@ -47,9 +49,10 @@ const ClientScroller = ({ images }) => {
     }, []);
 
     return (
+        // 'swiper-container container mx-auto mb-5 '
         <>
-            <Title title="Previous Clients"/>
-            <div className="swiper-container" style={{ margin: "50px 0 !important" }}>
+            <Title title="Esteemed Clients"/>
+            <div className={'swiper-container container mx-auto mb-5'} style={{ margin: "50px auto !important", cursor: "pointer" }}>
                 <div className="swiper-wrapper align-items-center">
                     {images.map((image, index) => (
                         <div key={index} className="swiper-slide">
@@ -57,9 +60,8 @@ const ClientScroller = ({ images }) => {
                         </div>
                     ))}
                 </div>
-                <div className={`swiper-pagination`}></div>
-                <div className={`swiper-button-prev`}></div>
-                <div className={`swiper-button-next`}></div>
+                {/* <div className={`swiper-button-prev`}></div>
+                <div className={`swiper-button-next`}></div> */}
             </div>
         </>
     );

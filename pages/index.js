@@ -23,10 +23,10 @@ const App = () => {
   const particleOptions = {
     "particles": {
       "number": {
-        "value": 251,
+        "value": 70,
         "density": {
           "enable": false,
-          "value_area": 800
+          "value_area": 80
         }
       },
       "color": {
@@ -159,20 +159,17 @@ const App = () => {
     '/images/clients/aiims.png',
     '/images/clients/meity.png',
     '/images/clients/nhm.png',
+    '/images/clients/ywam.png',
     '/images/clients/kredence.png',
-    '/images/clients/ywam.jpg',
     '/images/clients/mohfw.png'
   ];
 
+  if (typeof window !== 'undefined') {
+    document.body.style.backgroundImage = "url('/images/common/bg3.png')";
+  }
 
   return (
     <>
-      <style>
-        {` body {
-           background-image: url('/images/common/bg3.png'); 
-        }
-        `}
-      </style>
       <div className={styles.all}>
 
         <Menu logo={logo} links={links}></Menu>

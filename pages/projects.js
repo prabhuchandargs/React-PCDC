@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Modal, Image, Button, Form } from "react-bootstrap";
 import styles from './projects.module.css';
+import Title from './sectionTitle';
 
 const Projects = () => {
     const [showModal, setShowModal] = useState(false);
@@ -11,11 +12,10 @@ const Projects = () => {
         setShowModal(false);
         // setSelectedProject(null);
     }
-    const handleShow = project => {
+    const handleShow = (project) => {
         setSelectedProject(project);
         setShowModal(true);
     };
-
     const handleFilterChange = (type) => {
         setFilter(type);
     };
@@ -54,7 +54,7 @@ const Projects = () => {
         },
         {
             type: "Web Development",
-            logo: "/images/clients/ywam.jpg",
+            logo: "/images/clients/ywam.png",
             title: "Project 2",
             date: "February 2020",
             client: "Client 2",
@@ -107,6 +107,7 @@ const Projects = () => {
                     }
                 `}
             </style>
+            <Title title="Projects"/>
             <div className="button-row">
                 <Button variant="outline-secondary" className={filter === "All" ? "active-button" : ""} onClick={() => handleFilterChange("All")}>
                     All
@@ -132,10 +133,8 @@ const Projects = () => {
                         <div className={`col-4`}>
                             <Card key={index} className={`p-4 ` + styles.projectCard} onClick={() => handleShow(project)} >
                                 <Card.Img variant="top" src={project.logo} />
-                                <Card.Body>
-                                    <Card.Title>{project.title}</Card.Title>
-                                </Card.Body>
                             </Card>
+                            <h5 className="text-center my-3" style={{}}>{project.title}</h5>
                         </div>
                     ))}
                 </div>

@@ -8,9 +8,10 @@ const sectionTitle = ({ title }) => {
             <style>
                 {`
                     .section-title {
-                        font-weight: 700;
-                        color: black;
+                        font-weight: 1000;
+                        color: #251462;
                         text-align: center;
+                        font-size: 35px;
                     }
                 `}
             </style>

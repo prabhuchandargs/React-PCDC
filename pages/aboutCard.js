@@ -18,14 +18,15 @@ const AboutCard = ({ image, title, subHead, color, list, cardClass, width, onCli
         setIsHover(false);
     };
     const cardStyle = {
-        transition: '0.5s',
+        transition: '0.1s',
         boxShadow: "0 0 0 1px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%), 0 22px 44px rgb(0 0 0 / 5%)",
-        backgroundColor: isHover ? color+'55' : color+'11',
+        backgroundColor: isHover ? color+'55' : color+'25',
         color: 'black',
         cursor: isHover ? 'pointer' : 'normal',
         transform: isHover ? 'scale(1.05)' : 'scale(1)',
         border: '0',
-        backdropFilter:  'blur(3px)'
+        backdropFilter:  'blur(3px)',
+        boxShadow: '0 10px 30px 0 rgb(0 26 97 / 10%)'
     };
 
     return(
