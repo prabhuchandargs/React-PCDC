@@ -24,60 +24,90 @@ const Projects = () => {
     const projects = [
         {
             type: "Web Development",
-            logo: "/images/clients/meity.png",
-            title: "Project 1",
-            date: "January 2020",
-            client: "Client 1",
+            logo: "/images/projects/kredence.png",
+            title: "Kredence Website",
+            date: "December 2021",
+            client: "Direct client - Kredence Buildfast Pvt Ltd",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             technologies: ["React", "Node.js", "PostgreSQL"],
-            demo: "https://demo1.com"
-        },
-        {
-            type: "UX Design",
-            logo: "/images/clients/kredence.png",
-            title: "Project 2",
-            date: "February 2020",
-            client: "Client 2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            technologies: ["React", "Node.js", "MongoDB"],
-            demo: "https://demo2.com"
-        },
-        {
-            type: "UX Design",
-            logo: "/images/clients/mohfw.png",
-            title: "Project 2",
-            date: "February 2020",
-            client: "Client 2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            technologies: ["React", "Node.js", "MongoDB"],
-            demo: "https://demo2.com"
+            demo: "https://kredence.in/"
         },
         {
             type: "Web Development",
-            logo: "/images/clients/ywam.png",
-            title: "Project 2",
-            date: "February 2020",
-            client: "Client 2",
+            logo: "/images/projects/fhir-site1.png",
+            title: "FHIR Connector Portal",
+            date: "Jan 2023",
+            client: "Ministry of Health & Family Welfare via CDAC",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            technologies: ["React", "Node.js", "MongoDB"],
+            demo: "https://ndhmexchange.uat.dcservices.in/FHIRConnector/"
+        },
+        {
+            type: "Web Development",
+            logo: "/images/projects/ywam.png",
+            title: "Youth with a Mission - SF Chapter",
+            date: "June 2020",
+            client: "YWAM Org",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            technologies: ["React", "Node.js", "MongoDB"],
+            demo: "https://ywamn2nsanfrancisco.org/"
+        },
+        {
+            type: "UX Design",
+            logo: "/images/projects/eraktkosh-page.png",
+            title: "eRaktkosh UI Revamp",
+            date: "June 2022",
+            client: "National Health Mission via CDAC",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             technologies: ["React", "Node.js", "MongoDB"],
             demo: "https://demo2.com"
         },
         {
-            type: "Java Development",
-            logo: "/images/clients/nhm.png",
-            title: "Project 2",
-            date: "February 2020",
-            client: "Client 2",
+            type: "UX Design",
+            logo: "/images/projects/aiimsR.png",
+            title: "AIIMS Rajkot UI Revamp",
+            date: "September 2022",
+            client: "AIIMS via CDAC",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             technologies: ["React", "Node.js", "MongoDB"],
             demo: "https://demo2.com"
         },
         {
             type: "Digital Art",
-            logo: "/images/clients/aiims.png",
-            title: "Project 2",
+            logo: "/images/projects/g20.png",
+            title: "eSushrut - G20 Launch",
             date: "February 2020",
-            client: "Client 2",
+            client: "CDAC Noida",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            technologies: ["React", "Node.js", "MongoDB"],
+            demo: "https://demo2.com"
+        },
+        {
+            type: "Digital Art",
+            logo: "/images/projects/eraktkosh-assets.png",
+            title: "eRaktkosh - Page Assets",
+            date: "July 2022",
+            client: "CDAC Noida",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            technologies: ["React", "Node.js", "MongoDB"],
+            demo: "https://demo2.com"
+        },
+        {
+            type: "Digital Art",
+            logo: "/images/projects/11.png",
+            title: "FHIR Connector - Page Assets",
+            date: "July 2022",
+            client: "CDAC Noida",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            technologies: ["React", "Node.js", "MongoDB"],
+            demo: "https://demo2.com"
+        },
+        {
+            type: "Digital Art",
+            logo: "/images/projects/wbdd.png",
+            title: "eRaktkosh - Digital Assets",
+            date: "July 2022",
+            client: "CDAC Noida",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             technologies: ["React", "Node.js", "MongoDB"],
             demo: "https://demo2.com"
@@ -95,7 +125,7 @@ const Projects = () => {
             <style>
                 {`
                     .active-button {
-                        background-color: blue;
+                        background-color: #110736;
                         color: white;
                     }
                     .button-row {
@@ -104,6 +134,9 @@ const Projects = () => {
                     }
                     .button-row button {
                         margin: 10px 10px;
+                    }
+                    .card-img {
+                        border-radius: 3% !important;
                     }
                 `}
             </style>
@@ -130,9 +163,9 @@ const Projects = () => {
                 <div className={`row gy-3`}>
                     {/* {styles.projectGrid}> */}
                     {filteredProjects.map((project, index) => (
-                        <div className={`col-4`}>
-                            <Card key={index} className={`p-4 ` + styles.projectCard} onClick={() => handleShow(project)} >
-                                <Card.Img variant="top" src={project.logo} />
+                        <div className={`col-3`}>
+                            <Card key={index} className={`p-3 ` + styles.projectCard} onClick={() => handleShow(project)} >
+                                <Card.Img src={project.logo} />
                             </Card>
                             <h5 className="text-center my-3" style={{}}>{project.title}</h5>
                         </div>
