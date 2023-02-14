@@ -20,7 +20,7 @@ const AboutCard = ({ image, title, subHead, color, list, cardClass, width, onCli
     const cardStyle = {
         transition: '0.1s',
         boxShadow: "0 0 0 1px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%), 0 22px 44px rgb(0 0 0 / 5%)",
-        backgroundColor: isHover ? color+'55' : color+'25',
+        backgroundColor: isHover ? color+'30' : color+'45',
         color: 'black',
         cursor: isHover ? 'pointer' : 'normal',
         transform: isHover ? 'scale(1.05)' : 'scale(1)',

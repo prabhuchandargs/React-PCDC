@@ -24,24 +24,26 @@
 .hero {
     min-height: 50vh;
     display: flex;
-    align-items: center;
+    align-items: left;
+    align-self:center;
     justify-content: center;
     z-index: 100 !important;
 }
 .hero h1 {
-    font-size: 80px;
-    font-weight:800;
+    font-size: 52px;
+    font-weight:900;
 }
 .hero h2 {
-    margin-top: -20px;
-    font-size: 50px;
+    /* margin-top: -20px; */
+    font-size: 48px;
     font-weight:800;
 }
 .hero h2 span {
-    font-size: 60px;
+    font-size: 48px;
+    font-weight: 1000;
 }
 .hero p {
-    font-size: 20px;
+    font-size: 16px;
     color: #525455;
 }
 .hero button {

@@ -6,8 +6,12 @@ import Hero from './hero';
 import About from './about';
 import ClientScroller from './clients';
 import Projects from './projects';
+import ImageScroller from './ImageScroller';
+import ImageList from './ImageScroller2';
+import Footer from "./Footer";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles.module.css';
+import 'font-awesome/css/font-awesome.min.css';
 import styles from './styles.module.css';
 
 const App = () => {
@@ -29,6 +33,7 @@ const App = () => {
           "value_area": 80
         }
       },
+      "fpsLimit": 30,
       "color": {
         "value": "#4851d9"
       },
@@ -47,22 +52,22 @@ const App = () => {
           "height": 100
         }
       },
-      "opacity": {
-        "value": 0.78125616521595,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
+      // "opacity": {
+      //   "value": 0.78125616521595,
+      //   "random": true,
+      //   "anim": {
+      //     "enable": false,
+      //     "speed": 1,
+      //     "opacity_min": 0.1,
+      //     "sync": false
+      //   }
+      // },
       "size": {
         "value": 3,
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 19.18081918081918,
+          "speed": 30,
           "size_min": 5.594405594405594,
           "sync": true
         }
@@ -76,7 +81,7 @@ const App = () => {
       },
       "move": {
         "enable": true,
-        "speed": 3,
+        "speed": 2,
         "direction": "none",
         "random": false,
         "straight": false,
@@ -93,7 +98,7 @@ const App = () => {
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
+          "enable": false,
           "mode": "repulse"
         },
         "onclick": {
@@ -164,33 +169,99 @@ const App = () => {
     '/images/clients/mohfw.png'
   ];
 
+  const scrollImages1 = [
+    '/images/projects/kredence.png',
+    '/images/projects/fhir-site1.png',
+    '/images/projects/ywam.png',
+    '/images/projects/eraktkosh-page.png',
+    '/images/projects/aiimsR.png',
+  ];
+
+  const scrollImages2 = [
+    '/images/projects/g20.png',
+    '/images/projects/eraktkosh-assets.png',
+    '/images/projects/11.png',
+    '/images/projects/wbdd.png'
+  ];
+  const scrollImages0 = [
+    '/images/projects/g20.png',
+    '/images/projects/eraktkosh-assets.png',
+    '/images/projects/11.png',
+    '/images/projects/wbdd.png',
+    '/images/projects/g20.png',
+    '/images/projects/eraktkosh-assets.png',
+    '/images/projects/11.png',
+    '/images/projects/wbdd.png'
+  ];
+
   if (typeof window !== 'undefined') {
     document.body.style.backgroundImage = "url('/images/common/bg3.png')";
   }
 
   return (
     <>
+      <style>
+        {`
+          /* Set the width of the carousel to the width of its container */
+          #image-carousel {
+            width: 100%;
+          }
+          
+          /* Set the height of the rows */
+          #row1-container,
+          #row2-container {
+            height: 370px; /* image height + gap */
+          }
+          
+          /* Set the background color of the row containers */
+          #row1-container,
+          #row2-container {
+            background-color: #f8f9fa;
+          }
+          
+          /* Set the background color of the images */
+          .rounded-3 {
+            background-color: #e9ecef;
+          }
+        `}
+      </style>
       <div className={styles.all}>
 
         <Menu logo={logo} links={links}></Menu>
-        <section className={"w-80 " + styles.mainArea}>
-          <Hero title="Accelerate Your Business" subtitle="Cutting-edge Digital Solutions" para="Custom-tailored web modules for all your business needs; Made with precision and love, from
-                an expert developer." />
-          <About />
-          <div className={styles.shapes}>
-            {/* <img src="/images/common/bg-puzzle.png" width="100"></img>
+        <div className={"container w-80 " + styles.mainArea}>
+          <div className="row">
+            <div className="col-6 align-self-center">
+              <Hero className="col-6" title="Accelerate Your Business with" subtitle="Cutting-edge Digital Solutions" para="Custom-tailored web modules for all your business needs; Made with precision and love, from
+                  an expert developer." />
+            </div>
+            <div className="col-6">
+              <ImageList images={scrollImages1} jmages={scrollImages2} />
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <div className={styles.shapes}>
+          {/* <img src="/images/common/bg-puzzle.png" width="100"></img>
           <img src="/images/common/bg-puzzle.png" width="100"></img>
           <img src="/images/common/bg-gears.png" width="100"></img>
           <img src="/images/common/bg-shapes.png" width="100"></img>
           <img src="/images/common/bg-shapes.png" style={{transform:'rotate(90deg)'}} width="100"></img> */}
-          </div>
-        </section>
+        </div>
+
+        <About />
         <ClientScroller images={clientImages} />
         <Projects />
+        {/* <ImageScroller images={scrollImages1} jmages={scrollImages2}/> */}
 
-        
+        <Footer isAvailable={true} />
+
+
       </div>
-      <Particles id="tsparticles" init={particlesInit} options={particleOptions} className={styles.particles} style={{zIndex:"-999 !important;  background-image: url('/images/common/bg3.png'); " }}/>
+      <Particles id="tsparticles" init={particlesInit} options={particleOptions} className={styles.particles} style={{ zIndex: "-999 !important;  background-image: url('/images/common/bg3.png'); " }} />
     </>
   );
 
