@@ -11,7 +11,7 @@ const Hero = ({ title, subtitle, para }) => (
           <h2><span className={styles.animateCharacter}>{subtitle}</span></h2>
           <p className="mt-3 mb-4">{para}</p>
           <div className="d-flex justify-content-left mt-5">
-            <Button value="Input" className="mx-2" style={{backgroundColor: "#110736"}}>Book a Meeting</Button>
+            <Button value="Input" className="mx-2" style={{backgroundColor: "#24498b"}}>Book a Meeting</Button>
             <Button variant="light" value="Input" className="mx-2">View Projects</Button>
           </div>
         </Col>

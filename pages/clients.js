@@ -51,8 +51,8 @@ const ClientScroller = ({ images }) => {
     return (
         // 'swiper-container container mx-auto mb-5 '
         <>
-            <Title title="Esteemed Clients"/>
-            <div className={'swiper-container container mx-auto mb-5'} style={{ margin: "50px auto !important", cursor: "pointer" }}>
+            <Title subtitle="Esteemed Clients"/>
+            <div className={'swiper-container container mx-auto mb-5'} style={{ margin: "10px auto 100px !important", cursor: "pointer" }}>
                 <div className="swiper-wrapper align-items-center">
                     {images.map((image, index) => (
                         <div key={index} className="swiper-slide">

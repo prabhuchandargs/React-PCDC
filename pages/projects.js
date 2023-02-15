@@ -125,11 +125,11 @@ const Projects = () => {
             <style>
                 {`
                     .active-button {
-                        background-color: #110736;
+                        background-color: #24498b;
                         color: white;
                     }
                     .button-row {
-                        text-align: center;
+                        text-align: left;
                         margin-bottom:20px;
                     }
                     .button-row button {
@@ -140,23 +140,25 @@ const Projects = () => {
                     }
                 `}
             </style>
-            <Title title="Projects"/>
-            <div className="button-row">
-                <Button variant="outline-secondary" className={filter === "All" ? "active-button" : ""} onClick={() => handleFilterChange("All")}>
-                    All
-                </Button>
-                <Button variant="outline-secondary" className={filter === "Web Development" ? "active-button" : ""} onClick={() => handleFilterChange("Web Development")}>
-                    Web Development
-                </Button>
-                <Button variant="outline-secondary" className={filter === "UX Design" ? "active-button" : ""} onClick={() => handleFilterChange("UX Design")}>
-                    UX Design
-                </Button>
-                <Button variant="outline-secondary" className={filter === "Java Development" ? "active-button" : ""} onClick={() => handleFilterChange("Java Development")}>
-                    Java Development
-                </Button>
-                <Button variant="outline-secondary" className={filter === "Digital Art" ? "active-button" : ""} onClick={() => handleFilterChange("Digital Art")}>
-                    Digital Art
-                </Button>
+            <Title title="View our recent work" subtitle="Projects"/>
+            <div className="container">
+                <div className="button-row">
+                    <Button variant="outline-secondary" className={filter === "All" ? "active-button" : ""} onClick={() => handleFilterChange("All")}>
+                        All
+                    </Button>
+                    <Button variant="outline-secondary" className={filter === "Web Development" ? "active-button" : ""} onClick={() => handleFilterChange("Web Development")}>
+                        Web Development
+                    </Button>
+                    <Button variant="outline-secondary" className={filter === "UX Design" ? "active-button" : ""} onClick={() => handleFilterChange("UX Design")}>
+                        UX Design
+                    </Button>
+                    <Button variant="outline-secondary" className={filter === "Java Development" ? "active-button" : ""} onClick={() => handleFilterChange("Java Development")}>
+                        Java Development
+                    </Button>
+                    <Button variant="outline-secondary" className={filter === "Digital Art" ? "active-button" : ""} onClick={() => handleFilterChange("Digital Art")}>
+                        Digital Art
+                    </Button>
+                </div>
             </div>
 
             <div className={`container`}>

@@ -8,7 +8,7 @@ const ImageList = ({ images, jmages }) => {
         <style>
             {`
                 .image-list {
-                    height: 100vh;
+                    height: 70vh;
                     overflow: hidden;
                   }
                   
@@ -21,6 +21,7 @@ const ImageList = ({ images, jmages }) => {
                     justify-content: center;
                     animation: scroll 35s linear infinite;
                     margin-right: 0 !important;
+                    transform: rotateZ(360deg);
                   }
                   
                   .rounded-square {
@@ -41,13 +42,9 @@ const ImageList = ({ images, jmages }) => {
                     0% {
                       transform: translate(0, 0);
                     }
-                    50% {
-                      transform: translate(0, -50%);
-                    }
                     100% {
-                      transform: translate(0, 0);
-                    }
-                    
+                      transform: translate(0, -50%);
+                    }                    
                   }
                   
             `}

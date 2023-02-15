@@ -3,10 +3,10 @@ import { loadFull } from "tsparticles";
 
 import Menu from './responsiveNavbar';
 import Hero from './hero';
-import About from './about';
+import Services from './services';
 import ClientScroller from './clients';
 import Projects from './projects';
-import ImageScroller from './ImageScroller';
+import About from './about';
 import ImageList from './ImageScroller2';
 import Footer from "./Footer";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -38,7 +38,7 @@ const App = () => {
         "value": "#4851d9"
       },
       "shape": {
-        "type": "triangle",
+        "type": "circle",
         "stroke": {
           "width": 0,
           "color": "#000000"
@@ -170,28 +170,35 @@ const App = () => {
   ];
 
   const scrollImages1 = [
-    '/images/projects/kredence.png',
-    '/images/projects/fhir-site1.png',
-    '/images/projects/ywam.png',
-    '/images/projects/eraktkosh-page.png',
-    '/images/projects/aiimsR.png',
+    '/images/scroller/home/10.png',
+    '/images/scroller/home/2.png',
+    '/images/scroller/home/3.png',
+    '/images/scroller/home/4.png',
+    '/images/scroller/home/5.png'
   ];
 
   const scrollImages2 = [
-    '/images/projects/g20.png',
-    '/images/projects/eraktkosh-assets.png',
-    '/images/projects/11.png',
-    '/images/projects/wbdd.png'
+    '/images/scroller/home/6.png',
+    '/images/scroller/home/7.png',
+    '/images/scroller/home/8.png',
+    '/images/scroller/home/9.png',
+    '/images/scroller/home/1.png'
   ];
   const scrollImages0 = [
-    '/images/projects/g20.png',
-    '/images/projects/eraktkosh-assets.png',
-    '/images/projects/11.png',
-    '/images/projects/wbdd.png',
-    '/images/projects/g20.png',
-    '/images/projects/eraktkosh-assets.png',
-    '/images/projects/11.png',
-    '/images/projects/wbdd.png'
+    '/images/scroller/home/1.png',
+    '/images/scroller/home/2.png',
+    '/images/scroller/home/3.png',
+    '/images/scroller/home/4.png',
+    '/images/scroller/home/5.png',
+    '/images/scroller/home/6.png',
+    '/images/scroller/home/7.png',
+    '/images/scroller/home/8.png',
+    '/images/scroller/home/9.png',
+    '/images/scroller/home/10.png',
+    '/images/scroller/home/11.png',
+    '/images/scroller/home/12.png',
+    '/images/scroller/home/13.png',
+    '/images/scroller/home/14.png'
   ];
 
   if (typeof window !== 'undefined') {
@@ -251,9 +258,10 @@ const App = () => {
           <img src="/images/common/bg-shapes.png" width="100"></img>
           <img src="/images/common/bg-shapes.png" style={{transform:'rotate(90deg)'}} width="100"></img> */}
         </div>
-
-        <About />
         <ClientScroller images={clientImages} />
+        <Services />
+        <About />
+        
         <Projects />
         {/* <ImageScroller images={scrollImages1} jmages={scrollImages2}/> */}
 
