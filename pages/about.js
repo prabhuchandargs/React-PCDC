@@ -8,7 +8,9 @@ const About = () => {
                 .about {
                     display: flex;
                     height: 500px;
-                    background: linear-gradient(135deg, #0e7ca7, #aed5cb 59%, #16a4bb);
+                    margin-bottom: 70px;
+                    // background: linear-gradient(135deg, #0e7ca7, #aed5cb 59%, #16a4bb);
+                    background-image: url(/images/common/about.png), linear-gradient(135deg, #081e3d, #243f6e 59%, #061c69);
                   }
                   
                   .left-half {

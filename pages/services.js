@@ -17,7 +17,7 @@ var stylingObject = {
 
 const Services = () => (
     <Container className="mb-5">
-        <Title subtitle="Services" title="Checkout&nbsp;&nbsp;the&nbsp;&nbsp;offered&nbsp;&nbsp;services"/>
+        <Title subtitle="" title="Services"/>
         <Row>
             {/* <Col xs={12} md={4}>
                 <ServiceCard cardClass={styles.pcDcCard}
@@ -29,13 +29,13 @@ const Services = () => (
                 />
             </Col> */}
             <Col xs={12} md={12}>
-                <Row>
+                <Row className='gx-5 gy-4'>
                     <ServiceCard cardClass={styles.serviceBox}
                         width="4"
                         image="/images/serviceCards/web-dev.png"
                         title="Web Development"
                         subHead="Convert Wireframes to Responsive HTML Landing Pages"
-                        color="#E0687D"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 2 clicked")}
                     />
@@ -44,7 +44,7 @@ const Services = () => (
                         image="/images/serviceCards/ui.png"
                         title="UX Design"
                         subHead="Convert Business Logic into User Flow for effective UX"
-                        color="#7768DA"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 3 clicked")}
                     />
@@ -53,7 +53,7 @@ const Services = () => (
                         image="/images/serviceCards/e-commerce.png"
                         title="E-Commerce"
                         subHead="One stop solution for Shopping, Inventory and Order Management"
-                        color="#E2766D"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 4 clicked")}
                     />
@@ -62,7 +62,7 @@ const Services = () => (
                         image="/images/serviceCards/seo.png"
                         title="SEO & Ranking"
                         subHead="Increase online presence through effective SEO"
-                        color="#BD8F1B"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 5 clicked")}
                     />
@@ -71,7 +71,7 @@ const Services = () => (
                         image="/images/serviceCards/dev.png"
                         title="Developer for hire"
                         subHead="Micro-contractual hire for Module Creation and Bug Fixes"
-                        color="#344EBA"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 5 clicked")}
                     />
@@ -80,7 +80,7 @@ const Services = () => (
                         image="/images/serviceCards/digital-artifact.png"
                         title="Digital Artifacts"
                         subHead="Digital Media and Print Media Design for all your business needs"
-                        color="#9030C9"
+                        color="#24498b"
                         list={[]}
                         onClick={() => console.log("Card 5 clicked")}
                     />
