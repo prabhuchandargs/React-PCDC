@@ -8,7 +8,7 @@ const ImageList = ({ images, jmages }) => {
         <style>
             {`
                 .image-list {
-                    height: 70vh;
+                    height: 60vh;
                     overflow: hidden;
                   }
                   

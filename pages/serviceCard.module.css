@@ -59,9 +59,8 @@
     font-weight: 700;
     font-size: 25px;
     font-family: 'Questrial' ;
-    /* color:rgb(104, 48, 173) !important; */
     
-    /* text-transform: uppercase; */
+     text-transform: uppercase; 
 }
 .serviceBox p{
     text-align: center;

@@ -20,7 +20,7 @@ const ImageScroller = ({ images, jmages }) => {
                 {`
                     .image-scroller {
                         position: relative;
-                        height: 75vh;
+                        height: 65vh;
                         overflow: hidden;
                     }
                     
